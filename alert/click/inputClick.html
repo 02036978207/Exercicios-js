@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>input</title>
+</head>
+<body>
+    <div>
+        <label for="nomeCompleto"> Nome Completo:</label>
+        <input type="text" id="nomeCompleto">
+        <button onclick="exibirNome()">Exibir Nome</button>
+    </div>
+</body>
+
+<script>
+    function exibirNome(){
+        var nomeCompleto = document.getElementById('nomeCompleto').value;
+
+        alert('O Nome Completo é "' + nomeCompleto + '".')
+
+        document.getElementById('nomeCompleto').value = ''
+    }
+</script>
+</html>

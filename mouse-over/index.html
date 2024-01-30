@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lâmpada Over</title>
+</head>
+<style>
+    #lampada:hover {
+        cursor: pointer;
+    }
+</style>
+<body>
+    <img id="lampada" src="/img/lampada.jpg" alt="Lâmpada" onmouseover="hoverImagem()" onmouseout="restaurarImagem()">
+</body>
+<script>
+    function hoverImagem() {
+        var imagemlampada = document.getElementById('lampada')
+        imagemlampada.src = '/img/lampada-on.jpg'
+    }
+
+    function restaurarImagem() {
+        var imagemlampada = document.getElementById('lampada')
+            imagemlampada.src = '/img/lampada.jpg'
+        }
+</script>
+</html>

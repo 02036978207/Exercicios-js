@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Urso Caminhando</title>
+</head>
+<style>
+    #urso {
+        width: 100px;
+        height: 100px;
+        background: url(/img/urso1.png);
+        background-size: cover;
+        transition: background 0.5s ease-in-out;
+    }
+
+    #container {
+        position: relative;
+    }
+</style>
+<body>
+    
+<div id="container">
+    <div id="urso"></div>
+</div>
+
+</body>
+<script>
+    const urso = document.getElementById('urso')
+    const container = document.getElementById('container')
+
+    let posicaoAtual = 0
+
+    function andar() {
+        posicaoAtual += 50
+        container.style.left = posicaoAtual + 'px'
+
+        let currentBackground = getComputedStyle(urso).backgroundImage;
+
+        if(urso.style.background.includes('urso1.png')) {
+            urso.style.background = 'url("/img/urso2.png")'
+        }else if(urso.style.background.includes('urso2')) {
+            urso.style.background = 'url("/img/urso3.png")'
+        }else{
+            urso.style.background = 'url("/img/urso1")'
+        }
+
+        setTimeout(andar, 500);
+    }
+    andar();
+</script>
+</html>

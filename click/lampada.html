@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lâmpada click
+    </title>
+</head>
+<body>
+
+    <img id="lampada" src="/img/lampada.jpg" alt="Lâmpada" onclick="trocarImagem()">
+
+    
+</body>
+<script>
+    function trocarImagem() {
+        var imagemlampada = document.getElementById ('lampada')
+
+       
+        if(imagemlampada.src.endsWith('lampada.jpg')) {
+            
+            imagemlampada.src = '/img/lampada-on.jpg'
+        }else {
+            imagemlampada.src = '/img/lampada.jpg'
+        }
+    }
+</script>
+</html>
